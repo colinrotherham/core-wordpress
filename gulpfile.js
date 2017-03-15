@@ -10,6 +10,7 @@ var config = require('./package.json').config;
 // Non-gulp modules
 plugins.browserSync = require('browser-sync');
 plugins.sequence = require('run-sequence');
+plugins.stream = require('event-stream');
 
 /**
  * Child tasks
@@ -25,11 +26,7 @@ gulp.task('css', getModule('css'));
 gulp.task('css-lint', getModule('css/lint'));
 gulp.task('js', getModule('js'));
 gulp.task('js-lint', getModule('js/lint'));
-gulp.task('html', getModule('html'));
-gulp.task('html-lint', getModule('html/lint'));
-gulp.task('html-a11y', getModule('html/a11y'));
 gulp.task('img', getModule('img'));
-gulp.task('img-fallbacks', getModule('img/fallbacks'));
 gulp.task('watch', getModule('watch'));
 gulp.task('serve', getModule('serve'));
 
@@ -39,7 +36,7 @@ gulp.task('serve', getModule('serve'));
 
 // Shared build tasks
 gulp.task('build', ['clean'], function (callback) {
-	plugins.sequence(['js-lint', 'css-lint'], ['js', 'css', 'img-fallbacks'], ['html', 'img'], ['html-lint', 'html-a11y'], callback);
+	plugins.sequence(['js-lint', 'css-lint'], ['js', 'css', 'img'], callback);
 });
 
 // Default tasks

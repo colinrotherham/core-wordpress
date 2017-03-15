@@ -1,0 +1,57 @@
+{
+  "name": "colinrotherham/core-wordpress",
+  "description": "Core Project Build for WordPress",
+  "type": "project",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://languages.koodimonni.fi"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.5.10",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NDU5MTV8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTEyLTA5IDIwOjM1OjE3"
+        }
+      }
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "": "dist/content/themes/crd-core/lib/"
+    }
+  },
+  "config": {
+    "vendor-dir": "dist/vendor"
+  },
+  "require": {
+    "advanced-custom-fields/advanced-custom-fields-pro": ">=5.5",
+    "johnpbloch/wordpress": "^4.7",
+    "koodimonni-language/en_GB": "*",
+    "wpackagist-plugin/wp-super-cache": "^1.4",
+    "wpackagist-plugin/ewww-image-optimizer": "^3.2",
+    "wpackagist-plugin/wp-cerber": "^4.3"
+  },
+  "require-dev": {},
+  "extra": {
+    "dropin-paths": {
+      "dist/content/languages/": ["vendor:koodimonni-language"],
+      "dist/content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+      "dist/content/languages/themes/": ["vendor:koodimonni-theme-language"]
+    },
+    "installer-paths": {
+      "dist/content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "dist/content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "dist/content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "dist/wordpress"
+  }
+}

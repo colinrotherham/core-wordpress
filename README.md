@@ -1,41 +1,73 @@
-Core
-====
+Core WordPress
+==============
 
-### What is it?
-Core is a Gulp-driven starter project (fork it and start a project).
+### Database Setup
 
-Includes:
+1. Create WordPress databases:
+	```
+	core
+	```
 
-1. Critical CSS loading (100/100 on Google PageSpeed)
-2. HTML template generation via Assemble.io
-3. CommonJS module bundling via webpack
-4. Sass, JavaScript and HTML linting
-5. Supports Internet Explorer 8 (yikes)
+	_Use the Unicode multi-byte encoding `utf8mb4`_
 
-### Initial setup
+2. Set permissions using the credentials set here:  
+	`/app/wp-config.php`
 
-Install Node.JS
 
-As root/administrator:
+### Back-End Setup
 
-```
-npm install -g gulp
-```
+1. Configure your web server (and PHP 5.6+) to serve the `dist/` web root, for example:
+	`http://local.domain.com`
 
-Install dependencies automatically by running:
-```
-npm install
-```
+2. From a Terminal, change to the repo’s root directory where you see `app/`. From here, you’ll need to install Composer to manage PHP packages:
+	```
+	curl -sS https://getcomposer.org/installer | php
+	```
 
-### Building
-All files for deployment copied to `/dist/`
+	If you’re using Windows, more complex instructions are required:
+	https://getcomposer.org/doc/00-intro.md#installation-windows
 
-Output a build.
-```
-gulp
-```
+3. Install the Composer packages:
+	```
+	composer install
+	```
 
-Output a development build, proxied via BrowserSync:
-```
-gulp dev
-```
+
+### Front-End Setup
+
+1. Install Node.JS
+
+2. Install Gulp globally (as root/adminstrator):
+
+	```
+	npm install -g gulp
+	```
+
+3. Install dependencies automatically by running:
+	```
+	npm install
+	```
+
+4. All files for deployment copied to `/dist/`
+	```
+	composer install && gulp
+	```
+
+5. Output a development build, proxied via BrowserSync
+	```
+	composer install && gulp dev
+	```
+
+	_This will launch start a local proxy to `http://local.domain.com` so any code changes will be live-reloaded using BrowserSync into all your open browsers (including mobiles)_
+
+
+### WordPress Setup
+
+1. Visit `http://local.domain.com` and follow the 5-minute install process
+
+2. Set the Permalink Settings to **Custom Structure**  
+	```
+	/%category%/%postname%/
+	```
+
+3. Set the theme to **Core WordPress**
