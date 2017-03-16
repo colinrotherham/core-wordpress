@@ -19,6 +19,9 @@ module.exports = function (paths, gulp, plugins) {
 			return plugins.sequence('css-lint', 'css', done);
 		}));
 
+		// Watch for critical CSS changes
+		plugins.watch(`${paths.buildAssets}/css/starter.min.css`, plugins.browserSync.reload);
+
 		// Watch for JS changes
 		plugins.watch(`${paths.srcAssets}/**/*.js`, plugins.batch(function (events, done) {
 			return plugins.sequence('js-lint', 'js', done);
