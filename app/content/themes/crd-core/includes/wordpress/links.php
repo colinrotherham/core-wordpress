@@ -24,3 +24,25 @@ add_action('template_redirect', function () {
 		add_filter($filter, 'wp_make_link_relative');
 	}
 });
+
+// Make URLs relative in nav menus
+add_action('nav_menu_link_attributes', function ($atts) {
+
+	if (!empty($atts['href'])) {
+		$atts['href'] = wp_make_link_relative($atts['href']);
+	}
+
+	return $atts;
+});
+
+// Make URLs relative in bespoke nav menus
+add_action('wp_get_nav_menu_items', function ($items) {
+
+	foreach ($items as $key => $item) {
+		if (!empty($item->url)) {
+			$item->url = wp_make_link_relative($item->url);
+		}
+	}
+
+	return $items;
+});
