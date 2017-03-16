@@ -21,12 +21,12 @@ $directory = get_stylesheet_directory();
 
 		<!-- Critical CSS -->
 		<!--[if (gte IE 9)|!(IE)]><!-->
-		<style><?php require_once("{$directory}/assets/css/starter.min.css"); ?></style>
+		<style><?php require_once("{$directory}/assets/css/critical.min.css"); ?></style>
 		<!--<![endif]-->
 
 		<!-- Critical JS -->
 		<script>document.documentElement.className = 'advanced';
-		<?php require_once("{$directory}/assets/js/starter.min.js"); ?></script>
+		<?php require_once("{$directory}/assets/js/critical.min.js"); ?></script>
 
 		<!-- Lazy-load CSS -->
 		<!--[if (gte IE 9)|!(IE)]><!-->

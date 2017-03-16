@@ -10,7 +10,7 @@ module.exports = function (paths, gulp, plugins) {
 	return function () {
 
 		// Watch for static asset changes
-		plugins.watch(`${paths.src}/**`, plugins.batch(function (events, done) {
+		plugins.watch(`${paths.src}/**/*`, plugins.batch(function (events, done) {
 			return plugins.sequence('copy', done);
 		}));
 
@@ -20,7 +20,7 @@ module.exports = function (paths, gulp, plugins) {
 		}));
 
 		// Watch for critical CSS changes
-		plugins.watch(`${paths.buildAssets}/css/starter.min.css`, plugins.browserSync.reload);
+		plugins.watch(`${paths.buildAssets}/css/critical.min.css`, plugins.browserSync.reload);
 
 		// Watch for JS changes
 		plugins.watch(`${paths.srcAssets}/**/*.js`, plugins.batch(function (events, done) {
