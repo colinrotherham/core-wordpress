@@ -19,7 +19,7 @@ Core WordPress
 1. Configure your web server (and PHP 5.6+) to serve the `dist/` web root, for example:
 	`http://local.domain.com`
 
-2. From a Terminal, change to the repo’s root directory where you see `app/`. From here, you’ll need to install Composer to manage PHP packages:
+2. From a Terminal, change to the repo’s root directory where you see `src/`. From here, you’ll need to install Composer to manage PHP packages:
 	```
 	curl -sS https://getcomposer.org/installer | php
 	```
@@ -40,7 +40,7 @@ Core WordPress
 2. Install Gulp globally (as root/adminstrator):
 
 	```
-	npm install -g gulp
+	npm install -g gulp-cli
 	```
 
 3. Install dependencies automatically by running:
@@ -50,12 +50,12 @@ Core WordPress
 
 4. All files for deployment copied to `/dist/`
 	```
-	composer install && gulp
+	composer install && npm run build
 	```
 
 5. Output a development build, proxied via BrowserSync
 	```
-	composer install && gulp dev
+	composer install && npm run dev
 	```
 
 	_This will launch start a local proxy to `http://local.domain.com` so any code changes will be live-reloaded using BrowserSync into all your open browsers (including mobiles)_

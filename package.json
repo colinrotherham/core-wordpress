@@ -9,59 +9,19 @@
   },
   "author": "Colin Rotherham",
   "homepage": "https://github.com/colinrotherham/core-wordpress",
-  "devDependencies": {
-    "autoprefixer": "^6.5.4",
-    "breakpoint-sass": "^2.7.1",
-    "browser-sync": "^2.18.5",
-    "browserify": "^13.1.1",
-    "components-webfontloader": "~1.5.2",
-    "css-mqpacker": "^5.0.1",
-    "csswring": "^5.1.0",
-    "del": "^2.2.2",
-    "eslint": "^3.12.2",
-    "eslint-config-semistandard": "^7.0.0",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "event-stream": "^3.3.4",
-    "fg-loadcss": "^1.2.0",
-    "fg-loadjs": "^1.0.0",
-    "gulp": "^3.9.1",
-    "gulp-batch": "^1.0.5",
-    "gulp-eslint": "^3.0.1",
-    "gulp-filter": "^4.0.0",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-load-plugins": "^1.4.0",
-    "gulp-newer": "^1.3.0",
-    "gulp-postcss": "^6.2.0",
-    "gulp-preservetime": "^1.2.1",
-    "gulp-rename": "~1.2.2",
-    "gulp-sass": "^3.0.0",
-    "gulp-sourcemaps": "^2.2.1",
-    "gulp-stylelint": "^3.7.0",
-    "gulp-svg2png": "^2.0.2",
-    "gulp-uglify": "~2.0.0",
-    "gulp-watch": "~4.3.11",
-    "html5shiv": "^3.7.3",
-    "htmlhint-stylish": "^1.0.3",
-    "jquery": "^1.12.4",
-    "normalize-scss": "^6.0.0",
-    "picturefill": "^3.0.2",
-    "run-sequence": "^1.2.2",
-    "stylelint-scss": "^1.4.1",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-named": "^1.1.0",
-    "vinyl-source-stream": "^1.1.0",
-    "webpack": "^2.2.1",
-    "webpack-stream": "^3.2.0"
+  "scripts": {
+    "build": "cross-env NODE_ENV=production gulp",
+    "dev": "cross-env NODE_ENV=development gulp dev",
+    "test": "gulp test"
   },
-  "config": {
-    "paths": {
-      "src": "./app",
-      "build": "./dist",
-      "srcAssets": "./app/content/themes/crd-core/assets",
-      "buildAssets": "./dist/content/themes/crd-core/assets",
-      "tasks": "./tasks"
-    }
+  "browserslist": [
+    "last 2 versions",
+    "> 2%",
+    "IE >= 8",
+    "iOS >= 7"
+  ],
+  "devDependencies": {
+    "@colinrotherham/core": "^7.1.0",
+    "cross-env": "^5.1.3"
   }
 }
