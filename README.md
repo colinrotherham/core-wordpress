@@ -11,7 +11,7 @@ Core WordPress
 	_Use the Unicode multi-byte encoding `utf8mb4`_
 
 2. Set permissions using the credentials set here:  
-	`/app/wp-config.php`
+	`/src/wp-config.php`
 
 
 ### Back-End Setup
@@ -29,7 +29,7 @@ Core WordPress
 
 3. Install the Composer packages:
 	```
-	composer install
+	php composer.phar install
 	```
 
 
@@ -50,12 +50,12 @@ Core WordPress
 
 4. All files for deployment copied to `/dist/`
 	```
-	composer install && npm run build
+	php composer.phar install && npm run build
 	```
 
 5. Output a development build, proxied via BrowserSync
 	```
-	composer install && npm run dev
+	php composer.phar install && npm run dev
 	```
 
 	_This will launch start a local proxy to `http://local.domain.com` so any code changes will be live-reloaded using BrowserSync into all your open browsers (including mobiles)_

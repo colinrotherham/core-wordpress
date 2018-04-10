@@ -38,7 +38,7 @@
     "koodimonni-language/en_GB": "*",
     "wpackagist-plugin/wp-super-cache": "^1.4",
     "wpackagist-plugin/ewww-image-optimizer": "^3.2",
-    "wpackagist-plugin/wp-cerber": "^4.3"
+    "wpackagist-plugin/wp-cerber": "^6.7"
   },
   "require-dev": {},
   "extra": {
