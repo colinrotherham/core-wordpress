@@ -2,9 +2,6 @@
  * Example module
  */
 
-import $ from 'jquery';
-
-// Test jQuery dependency
-if ($ && window.console) {
-	console.log('Hello, jquery is ready');
+if (window.console) {
+	console.log('Hello, @colinrotherham/core is ready');
 }
