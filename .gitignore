@@ -1,7 +1,6 @@
 dist
 node_modules
 .sass-cache
-composer.lock
 **/assets/css/*
 **/assets/js/*.min.js
 **/assets/js/*.map
