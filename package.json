@@ -21,7 +21,7 @@
     "iOS >= 7"
   ],
   "devDependencies": {
-    "@colinrotherham/core": "^7.3.0",
+    "@colinrotherham/core": "^7.4.0",
     "cross-env": "^5.2.0"
   }
 }
