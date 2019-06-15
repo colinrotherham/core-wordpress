@@ -10,15 +10,15 @@ global $app, $router, $wordpress;
 get_header();
 ?>
 
-		<!-- Main content -->
-		<main class="container group" role="main">
+        <!-- Main content -->
+        <main class="container group" role="main">
 
-			<div class="example wrapper">
-				<h1 class="headline headline--section">Route override</h1>
-				<p>Serving from: <strong>/example</strong></p>
-			</div>
+            <div class="example wrapper">
+                <h1 class="headline headline--section">Route override</h1>
+                <p>Serving from: <strong>/example</strong></p>
+            </div>
 
-		</main>
+        </main>
 
 <?php
 get_footer();

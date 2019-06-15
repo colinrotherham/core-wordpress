@@ -13,26 +13,26 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
 // App info
 $app = (object) [
-	'version' => '0.1.0'
+    'version' => '0.1.0'
 ];
 
 // Working directories
 $router = (object) [
-	'directory' => parse_url(get_bloginfo('template_directory'), PHP_URL_PATH),
-	'route' => parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+    'directory' => parse_url(get_bloginfo('template_directory'), PHP_URL_PATH),
+    'route' => parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
 ];
 
 // WordPress helper + route overrides
 $wordpress = new \CRD\WordPress([
 
-	// Route override: /example
-	'example' => array
-	(
-		'*' => (object) array
-		(
-			'title' => 'Example',
-			'template' => '/templates/example.php',
-			'cache' => true
-		)
-	)
+    // Route override: /example
+    'example' => array
+    (
+        '*' => (object) array
+        (
+            'title' => 'Example',
+            'template' => '/templates/example.php',
+            'cache' => true
+        )
+    )
 ]);

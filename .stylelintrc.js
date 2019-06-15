@@ -3,7 +3,7 @@ module.exports = {
     'stylelint-scss',
   ],
   rules: {
-    indentation: 'tab',
+    indentation: 2,
     'at-rule-empty-line-before': [
       'always', {
         ignoreAtRules: [

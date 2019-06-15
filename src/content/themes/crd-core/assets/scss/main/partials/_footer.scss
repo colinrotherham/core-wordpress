@@ -3,16 +3,16 @@
  */
 
 .footer {
-	display: block;
+  display: block;
 
-	background: map-get($colours, 'background');
-	color: mix(map-get($colours, 'background'), map-get($colours, 'content'), 20%);
+  background: map-get($colours, 'background');
+  color: mix(map-get($colours, 'background'), map-get($colours, 'content'), 20%);
 
-	strong {
-		display: inline-block;
-		padding: 0 6px;
+  strong {
+    display: inline-block;
+    padding: 0 6px;
 
-		border: 1px solid mix(map-get($colours, 'background'), map-get($colours, 'content'), 20%);;
-		border-radius: 4px;
-	}
+    border: 1px solid mix(map-get($colours, 'background'), map-get($colours, 'content'), 20%);;
+    border-radius: 4px;
+  }
 }
