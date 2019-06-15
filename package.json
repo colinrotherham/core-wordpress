@@ -13,7 +13,8 @@
     "test": "npm run test:dependencies && npm audit && npm run test:lint",
     "test:dependencies": "npm ls --depth=0",
     "test:lint:js": "eslint ./src/content/themes/crd-core --ext .js,.json,.mjs",
-    "test:lint": "npm run test:lint:js",
+    "test:lint:css": "stylelint ./src/content/themes/crd-core/**/*.scss",
+    "test:lint": "npm run test:lint:js && npm run test:lint:css",
     "build": "cross-env NODE_ENV=production npm test && gulp",
     "dev": "cross-env NODE_ENV=development gulp dev"
   },
@@ -24,7 +25,7 @@
     "iOS >= 7"
   ],
   "devDependencies": {
-    "@colinrotherham/core": "^8.0.1",
+    "@colinrotherham/core": "^8.0.2",
     "cross-env": "^5.2.0",
     "fg-loadcss": "^2.1.0",
     "fg-loadjs": "^1.1.0",
