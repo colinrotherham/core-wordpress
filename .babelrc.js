@@ -1,12 +1,18 @@
 module.exports = {
-	presets: [
-		['@babel/env', {
-			shippedProposals: true,
-			useBuiltIns: 'usage',
-			targets: {
-				node: '8.4',
-				browsers: []
-			}
-		}]
-	]
+  plugins: [
+    ['module-extension', {
+      mjs: 'js',
+    }],
+  ],
+  presets: [
+    ['@babel/preset-env', {
+      shippedProposals: true,
+      useBuiltIns: 'usage',
+      corejs: 3,
+      targets: {
+        node: '10.16',
+        browsers: [],
+      },
+    }],
+  ],
 };

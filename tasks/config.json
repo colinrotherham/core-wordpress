@@ -1,63 +1,51 @@
 {
-	"clean": {
-		"src": [
-			"./dist/*",
-			"!./dist/content",
-			"!./dist/vendor",
-			"!./dist/wordpress",
-			"./dist/content/themes/*"
-		]
-	},
-	"copy": {
-		"src": "./src/**/*.*",
-		"dest": "./dist"
-	},
-	"css": {
-		"src": [
-			"./src/content/themes/crd-core/assets/scss/critical.scss",
-			"./src/content/themes/crd-core/assets/scss/main.scss",
-			"./src/content/themes/crd-core/assets/scss/legacy.scss"
-		],
-		"watch": "./src/content/themes/crd-core/assets/**/*.scss",
-		"dest": "./dist/content/themes/crd-core/assets/css"
-	},
-	"img": {
-		"fallbacks": {
-			"src": "./src/content/themes/crd-core/assets/img/**/*.svg",
-			"dest": "./dist/content/themes/crd-core/assets/img"
-		},
-		"optimise": {
-			"src": "./src/content/themes/crd-core/assets/img/**/*.{png,jpg,gif,svg}",
-			"dest": "./src/content/themes/crd-core/assets/img"
-		}
-	},
-	"js": {
-		"webpack": {
-			"src": [
-				"./src/content/themes/crd-core/assets/js/critical.js",
-				"./src/content/themes/crd-core/assets/js/main.js",
-				"./src/content/themes/crd-core/assets/js/legacy.js"
-			],
-			"watch": "./src/content/themes/crd-core/assets/**/*.js",
-			"dest": "./dist/content/themes/crd-core/assets/js"
-		}
-	},
-	"lint": {
-		"css": {
-			"src": "./src/content/themes/crd-core/assets/**/*.scss"
-		},
-		"js": {
-			"src": "./src/content/themes/crd-core/assets/**/*.{js,json}"
-		}
-	},
-	"serve": {
-		"src": "./dist",
-		"options": {
-			"notify": false,
-			"open": false,
-			"proxy": "local.domain.com",
-			"reloadDelay": 400,
-			"reloadThrottle": 100
-		}
-	}
+  "clean": {
+    "src": [
+      "./dist/*",
+      "!./dist/content",
+      "!./dist/vendor",
+      "!./dist/wordpress",
+      "./dist/content/themes/*"
+    ]
+  },
+  "copy": {
+    "src": "./src/**/*.*",
+    "dest": "./dist"
+  },
+  "css": {
+    "src": [
+      "./src/content/themes/crd-core/assets/scss/critical.scss",
+      "./src/content/themes/crd-core/assets/scss/main.scss",
+      "./src/content/themes/crd-core/assets/scss/legacy.scss"
+    ],
+    "watch": "./src/content/themes/crd-core/assets/**/*.scss",
+    "dest": "./dist/content/themes/crd-core/assets/css"
+  },
+  "img": {
+    "optimise": {
+      "src": "./src/content/themes/crd-core/assets/img/**/*.{png,jpg,gif,svg}",
+      "dest": "./src/content/themes/crd-core/assets/img"
+    }
+  },
+  "js": {
+    "webpack": {
+      "src": [
+        "./src/content/themes/crd-core/assets/js/critical.mjs",
+        "./src/content/themes/crd-core/assets/js/main.mjs",
+        "./src/content/themes/crd-core/assets/js/legacy.mjs"
+      ],
+      "watch": "./src/content/themes/crd-core/assets/**/*.mjs",
+      "dest": "./dist/content/themes/crd-core/assets/js"
+    }
+  },
+  "serve": {
+    "src": "./dist",
+    "options": {
+      "notify": false,
+      "open": false,
+      "proxy": "local.domain.com",
+      "reloadDelay": 400,
+      "reloadThrottle": 100
+    }
+  }
 }
