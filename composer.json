@@ -15,7 +15,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.7.0",
+        "version": "5.8.0",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -33,12 +33,12 @@
     "vendor-dir": "dist/vendor"
   },
   "require": {
-    "advanced-custom-fields/advanced-custom-fields-pro": ">=5.7",
-    "johnpbloch/wordpress": "^4.9",
+    "advanced-custom-fields/advanced-custom-fields-pro": ">=5.8",
+    "johnpbloch/wordpress": "^5.2",
     "koodimonni-language/en_GB": "*",
     "wpackagist-plugin/wp-super-cache": "^1.6",
-    "wpackagist-plugin/ewww-image-optimizer": "^4.2",
-    "wpackagist-plugin/wp-cerber": "^7.2"
+    "wpackagist-plugin/ewww-image-optimizer": "^4.8",
+    "wpackagist-plugin/wp-cerber": "^8.3"
   },
   "require-dev": {},
   "extra": {
