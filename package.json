@@ -25,8 +25,8 @@
     "iOS >= 7"
   ],
   "devDependencies": {
-    "@colinrotherham/core": "^9.1.0",
-    "cross-env": "^6.0.3",
+    "@colinrotherham/core": "^9.2.1",
+    "cross-env": "^7.0.2",
     "fg-loadcss": "^2.1.0",
     "fg-loadjs": "^1.1.0",
     "normalize-scss": "^7.0.1",
